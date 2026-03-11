@@ -1,7 +1,7 @@
 // VulnerableTest.java
 import java.sql.*;
 
-public class Vuln {
+public class TestSecurity {
 
     // 🔴 Secret Scanner trigger karega
     String password = "supersecret123";
@@ -18,16 +18,6 @@ public class Vuln {
     public void runCommand(String userInput) throws Exception {
         Runtime.getRuntime().exec("ls " + userInput);
     }
-
-    // 🟡 Rules - print statements
-    public void calculate(int x) {
-        System.out.println("debug value: " + x);
-        System.out.println("entering calculate");
-
-        // TODO: fix this later
-        int result = x * 2;
-        System.out.println(result);
-    }
     
 
     // 🔴 OWASP - Weak hashing
@@ -36,4 +26,3 @@ public class Vuln {
         return md.digest(pass.getBytes()).toString();
     }
 }
-
