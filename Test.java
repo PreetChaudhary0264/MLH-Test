@@ -7,6 +7,7 @@ public class Test{
         for(int i = 1; i < arr.length; i++){
             prefix[i] = prefix[i-1] + arr[i];
         }
+        //for test 5
         System.out.println("Prefix Sum implemented");
     }
 }
