@@ -1,0 +1,16 @@
+# .pr-review.yml
+rules:
+  - name: "No hardcoded passwords"
+    pattern: "password\\s*=\\s*['\"].+['\"]"
+    severity: critical
+    message: "Hardcoded password detected! Use environment variables."
+
+  - name: "No print statements"
+    pattern: "print\\("
+    severity: warning
+    message: "Remove debug print statements."
+
+  - name: "No TODO comments"
+    pattern: "#\\s*TODO|//\\s*TODO"
+    severity: info
+    message: "TODO comment found."
